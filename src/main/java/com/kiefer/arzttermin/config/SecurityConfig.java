@@ -2,6 +2,7 @@ package com.kiefer.arzttermin.config;
 
 import com.kiefer.arzttermin.ui.LoginView;
 import com.vaadin.flow.spring.security.VaadinSecurityConfigurer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -20,8 +21,6 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableMethodSecurity(jsr250Enabled = true)
 public class SecurityConfig {
 
-    public static final String DEMO_PASSWORD = "demo";
-
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.with(VaadinSecurityConfigurer.vaadin(), configurer -> configurer
@@ -35,8 +34,10 @@ public class SecurityConfig {
     }
 
     @Bean
-    UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
-        String password = passwordEncoder.encode(DEMO_PASSWORD);
+    UserDetailsService userDetailsService(
+            PasswordEncoder passwordEncoder,
+            @Value("${DEMO_PASSWORD:demo}") String configuredPassword) {
+        String password = passwordEncoder.encode(configuredPassword);
         return new InMemoryUserDetailsManager(
                 User.withUsername("patient.anna").password(password).roles("PATIENT").build(),
                 User.withUsername("patient.ben").password(password).roles("PATIENT").build(),

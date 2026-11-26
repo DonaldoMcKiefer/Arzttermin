@@ -1,0 +1,195 @@
+@import url('./views/login-view.css');
+@import url('./views/shell.css');
+
+html {
+    --lumo-primary-color: hsl(176, 86%, 27%);
+    --lumo-primary-color-50pct: hsla(176, 86%, 27%, 0.5);
+    --lumo-primary-color-10pct: hsla(176, 86%, 27%, 0.1);
+    --lumo-primary-text-color: hsl(176, 86%, 23%);
+    --lumo-error-color: hsl(2, 68%, 43%);
+    --lumo-success-color: hsl(150, 62%, 31%);
+    --lumo-border-radius-s: 0.5rem;
+    --lumo-border-radius-m: 0.75rem;
+    --lumo-border-radius-l: 1rem;
+    --lumo-font-family: Inter, "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    color: #172b2a;
+    background: #f5f9f8;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: #f5f9f8;
+}
+
+h1, h2, h3 {
+    color: #133c3a;
+    letter-spacing: -0.025em;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.08;
+}
+
+h2 {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    line-height: 1.2;
+}
+
+.muted {
+    color: #617473;
+}
+
+.content-page {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: min(100%, 1180px);
+    margin: 0 auto;
+    padding: clamp(1.25rem, 3vw, 3rem);
+}
+
+.eyebrow {
+    color: #08736d;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.page-lead {
+    max-width: 46rem;
+    margin-top: 0;
+    color: #526a68;
+    font-size: 1.12rem;
+    line-height: 1.7;
+}
+
+.brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.brand-mark {
+    display: grid;
+    width: 2.2rem;
+    height: 2.2rem;
+    place-items: center;
+    border-radius: 0.72rem;
+    color: white;
+    background: #08736d;
+    box-shadow: 0 8px 20px rgb(8 115 109 / 22%);
+    font-size: 1.55rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.brand-name {
+    color: #123f3c;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    min-height: 1.75rem;
+    box-sizing: border-box;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 750;
+}
+
+.status-neutral { color: #526462; background: #e9efee; }
+.status-info { color: #135c77; background: #def2fa; }
+.status-success { color: #17633f; background: #dcf4e6; }
+.status-warning { color: #7b510b; background: #fff0c9; }
+.status-danger { color: #8c2c28; background: #fde4e1; }
+
+.primary-action {
+    min-height: 2.75rem;
+    padding-inline: 1.2rem;
+    color: white;
+    background: #08736d;
+    font-weight: 750;
+    box-shadow: 0 8px 18px rgb(8 115 109 / 18%);
+}
+
+.home-hero {
+    overflow: hidden;
+    position: relative;
+    padding: clamp(1.5rem, 4vw, 3.5rem);
+    border: 1px solid #dbe9e7;
+    border-radius: 1.4rem;
+    background:
+        radial-gradient(circle at 93% 8%, rgb(154 224 212 / 46%), transparent 29%),
+        linear-gradient(145deg, #ffffff, #edf8f5);
+    box-shadow: 0 18px 48px rgb(39 77 74 / 9%);
+}
+
+.home-hero h1 {
+    margin: 0.55rem 0 0.6rem;
+}
+
+.role-entry-card {
+    box-sizing: border-box;
+    max-width: 43rem;
+    margin-top: 2rem;
+    padding: 1.4rem;
+    border: 1px solid rgb(8 115 109 / 18%);
+    border-radius: 1rem;
+    background: rgb(255 255 255 / 86%);
+    backdrop-filter: blur(8px);
+}
+
+.role-entry-card h2,
+.role-entry-card p {
+    margin-top: 0;
+}
+
+.role-entry-card p {
+    color: #526a68;
+    line-height: 1.6;
+}
+
+.pilot-info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 1px solid #dbe8e6;
+    border-radius: 1rem;
+    background: white;
+}
+
+.pilot-info-card vaadin-icon {
+    flex: 0 0 auto;
+    margin-top: 0.1rem;
+    color: #08736d;
+}
+
+.pilot-info-card h2,
+.pilot-info-card p {
+    margin: 0;
+}
+
+.pilot-info-card p {
+    margin-top: 0.35rem;
+    color: #617473;
+    line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+    .content-page {
+        padding: 1rem;
+    }
+
+    .home-hero {
+        border-radius: 1rem;
+    }
+}

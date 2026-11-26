@@ -1,0 +1,276 @@
+.workspace-page {
+    gap: 1.25rem;
+}
+
+.workspace-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.workspace-header h1 {
+    margin: 0.45rem 0 0.65rem;
+}
+
+.workspace-header .page-lead {
+    margin-bottom: 0;
+}
+
+.workspace-header > vaadin-button {
+    flex: 0 0 auto;
+    margin-top: 1.5rem;
+    min-height: 2.8rem;
+}
+
+.notice-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 1rem 1.15rem;
+    border: 1px solid #cce5e1;
+    border-radius: 0.9rem;
+    color: #174d49;
+    background: #eaf7f4;
+}
+
+.notice-card vaadin-icon {
+    flex: 0 0 auto;
+    margin-top: 0.12rem;
+    color: #08736d;
+}
+
+.notice-card strong,
+.notice-card .strong-text,
+.notice-card p {
+    display: block;
+    margin: 0;
+}
+
+.notice-card p {
+    margin-top: 0.25rem;
+    color: #4b6764;
+}
+
+.workspace-card,
+.workspace-detail {
+    box-sizing: border-box;
+    padding: clamp(1rem, 2.5vw, 1.6rem);
+    border: 1px solid #dbe8e6;
+    border-radius: 1.05rem;
+    background: white;
+    box-shadow: 0 12px 30px rgb(42 78 75 / 6%);
+}
+
+.workspace-card h2,
+.workspace-card > p,
+.workspace-detail h2,
+.workspace-detail h3,
+.workspace-detail p {
+    margin-top: 0;
+}
+
+.workspace-detail:empty {
+    display: none;
+}
+
+.detail-heading,
+.workspace-page .section-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.detail-heading h2,
+.workspace-page .section-heading h3 {
+    margin-bottom: 0.35rem;
+}
+
+.detail-heading p {
+    color: #617471;
+}
+
+.workspace-page .section-heading {
+    align-items: center;
+    margin-top: 1.6rem;
+}
+
+.metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0 1.6rem;
+}
+
+.metadata-item {
+    padding: 0.85rem 0.95rem;
+    border: 1px solid #e1ecea;
+    border-radius: 0.75rem;
+    background: #f8fbfa;
+}
+
+.metadata-item span,
+.metadata-item strong,
+.metadata-item .strong-text {
+    display: block;
+}
+
+.metadata-item span {
+    margin-bottom: 0.3rem;
+    color: #6b7e7b;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.045em;
+}
+
+.metadata-item strong,
+.metadata-item .strong-text {
+    color: #244a47;
+    line-height: 1.45;
+}
+
+.info-block {
+    margin-top: 1rem;
+    padding: 1rem 1.1rem;
+    border-left: 4px solid #08736d;
+    border-radius: 0 0.8rem 0.8rem 0;
+    background: #f0f8f6;
+}
+
+.info-block h3,
+.info-block p {
+    margin-bottom: 0.4rem;
+}
+
+.info-block vaadin-button {
+    margin-top: 0.4rem;
+}
+
+.empty-state {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-top: 0.75rem;
+    padding: 1.1rem;
+    border: 1px dashed #bfd2cf;
+    border-radius: 0.8rem;
+    color: #536d6a;
+    background: #fafcfc;
+}
+
+.empty-state vaadin-icon {
+    color: #40847f;
+}
+
+.empty-state strong,
+.empty-state .strong-text,
+.empty-state p {
+    display: block;
+    margin: 0;
+}
+
+.strong-text {
+    font-weight: 750;
+}
+
+.empty-state p {
+    margin-top: 0.3rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem 1rem;
+    width: 100%;
+}
+
+.form-grid > * {
+    min-width: 0;
+    width: 100%;
+}
+
+.form-grid .full-span {
+    grid-column: 1 / -1;
+}
+
+.workspace-grid {
+    width: 100%;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.cost-breakdown {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.cost-item {
+    padding: 1rem;
+    border: 1px solid #dce9e7;
+    border-radius: 0.8rem;
+    background: #f9fbfb;
+}
+
+.cost-item.portal-fee {
+    border-color: #acd7d1;
+    background: #edf8f5;
+}
+
+.cost-item span,
+.cost-item strong,
+.cost-item small {
+    display: block;
+}
+
+.cost-item span {
+    color: #5b706d;
+    font-size: 0.82rem;
+    font-weight: 720;
+}
+
+.cost-item strong {
+    margin-top: 0.3rem;
+    color: #174b47;
+    font-size: 1.25rem;
+}
+
+.cost-item small {
+    margin-top: 0.3rem;
+    color: #667976;
+    line-height: 1.4;
+}
+
+@media (max-width: 760px) {
+    .workspace-header {
+        flex-direction: column;
+    }
+
+    .workspace-header > vaadin-button {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .metadata-grid,
+    .cost-breakdown,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid .full-span {
+        grid-column: auto;
+    }
+
+    .detail-heading,
+    .workspace-page .section-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .workspace-page .section-heading vaadin-button {
+        width: 100%;
+    }
+}

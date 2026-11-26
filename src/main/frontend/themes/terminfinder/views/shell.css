@@ -1,0 +1,134 @@
+.app-header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 4.2rem;
+    padding: 0.6rem clamp(0.7rem, 2vw, 1.5rem);
+    border-bottom: 1px solid #dce8e6;
+    background: rgb(255 255 255 / 94%);
+    backdrop-filter: blur(12px);
+}
+
+.header-spacer {
+    flex: 1;
+}
+
+.mobile-brand {
+    display: none;
+}
+
+.user-summary {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.current-role {
+    color: #08736d;
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.current-user {
+    color: #284744;
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+
+.logout-button {
+    min-height: 2.6rem;
+    color: #385653;
+    background: #f1f6f5;
+}
+
+.app-drawer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 1.4rem 1rem 1rem;
+    background: #ffffff;
+}
+
+.drawer-brand {
+    padding: 0.2rem 0.65rem 1.6rem;
+}
+
+.drawer-demo-label {
+    width: fit-content;
+    margin: 0 0.65rem 1rem;
+    padding: 0.35rem 0.55rem;
+    border-radius: 0.45rem;
+    background: #e8f5f2;
+}
+
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    min-height: 2.85rem;
+    box-sizing: border-box;
+    padding: 0.65rem 0.75rem;
+    border-radius: 0.7rem;
+    color: #355653;
+    font-weight: 680;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    outline: none;
+    color: #075f5a;
+    background: #edf7f5;
+}
+
+.drawer-footnote {
+    margin-top: auto;
+    padding: 1.2rem 0.65rem 0.3rem;
+    color: #748784;
+    font-size: 0.76rem;
+    line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+    .mobile-brand {
+        display: flex;
+    }
+
+    .mobile-brand .brand-mark {
+        width: 1.9rem;
+        height: 1.9rem;
+        border-radius: 0.6rem;
+        font-size: 1.3rem;
+    }
+
+    .user-summary {
+        display: none;
+    }
+
+    .logout-button {
+        min-width: 2.75rem;
+        padding-inline: 0.65rem;
+        font-size: 0;
+    }
+
+    .logout-button vaadin-icon {
+        margin: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .mobile-brand .brand-name {
+        display: none;
+    }
+}

@@ -1,0 +1,678 @@
+.patient-view {
+    gap: 2rem;
+}
+
+.patient-page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.patient-page-header h1 {
+    margin: 0.55rem 0 0.65rem;
+}
+
+.refresh-button {
+    flex: 0 0 auto;
+    min-height: 2.75rem;
+    color: #245956;
+    background: #eaf4f2;
+}
+
+.patient-search-card,
+.patient-result-section {
+    box-sizing: border-box;
+    border: 1px solid #d9e7e5;
+    border-radius: 1.15rem;
+    background: #ffffff;
+    box-shadow: 0 12px 36px rgb(35 72 69 / 7%);
+}
+
+.patient-search-card {
+    padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.patient-view .section-heading,
+.result-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+}
+
+.patient-view .section-heading {
+    padding-bottom: 1.4rem;
+    border-bottom: 1px solid #e2ecea;
+}
+
+.patient-view .section-heading h2,
+.patient-view .section-heading p,
+.result-heading h2,
+.result-heading p {
+    margin: 0;
+}
+
+.patient-view .section-heading p,
+.result-heading p {
+    margin-top: 0.35rem;
+    color: #617572;
+    line-height: 1.5;
+}
+
+.section-icon {
+    display: grid;
+    flex: 0 0 auto;
+    width: 2.65rem;
+    height: 2.65rem;
+    place-items: center;
+    border-radius: 0.8rem;
+    color: #08736d;
+    background: #e5f4f1;
+}
+
+.section-icon vaadin-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.patient-form-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.patient-basics-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    padding: 1.5rem 0 0.3rem;
+}
+
+.patient-basics-grid > :nth-child(1),
+.patient-basics-grid > :nth-child(2) {
+    grid-column: span 3;
+}
+
+.patient-basics-grid > :nth-child(3) {
+    grid-column: span 3;
+}
+
+.patient-basics-grid > :nth-child(4) {
+    grid-column: span 2;
+}
+
+.patient-basics-grid > :nth-child(5) {
+    grid-column: span 1;
+}
+
+.patient-form-section {
+    margin-top: 1.6rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid #e4eceb;
+}
+
+.patient-form-section > h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.patient-form-section > p {
+    max-width: 55rem;
+    margin: 0.4rem 0 1.15rem;
+    color: #617572;
+    line-height: 1.55;
+}
+
+.required-section > h3::after {
+    content: " *";
+    color: var(--lumo-error-text-color);
+}
+
+.availability-windows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.availability-window-row {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    border: 1px solid #dce8e6;
+    border-radius: 0.8rem;
+    background: #f8fbfa;
+}
+
+.window-number {
+    color: #315b57;
+    font-size: 0.86rem;
+    font-weight: 800;
+}
+
+.window-fields {
+    display: grid;
+    grid-template-columns: minmax(10rem, 1.4fr) repeat(2, minmax(7.5rem, 0.8fr));
+    gap: 0.7rem;
+}
+
+.remove-window-button {
+    color: #8a3c37;
+}
+
+.add-window-button {
+    margin-top: 0.5rem;
+}
+
+.patient-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem 1.5rem;
+    margin-top: 1rem;
+}
+
+.patient-form-section vaadin-radio-group {
+    width: 100%;
+}
+
+.tariff-fields {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(15rem, 0.7fr);
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.search-form-actions {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid #dce8e6;
+}
+
+.cost-preview {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex: 1;
+    gap: 0.8rem;
+}
+
+.cost-preview-item {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0.9rem 1rem;
+    border-radius: 0.75rem;
+    background: #f1f8f6;
+}
+
+.cost-label,
+.fact-label {
+    color: #617572;
+    font-size: 0.77rem;
+    font-weight: 780;
+    letter-spacing: 0.035em;
+    text-transform: uppercase;
+}
+
+.cost-value {
+    margin-top: 0.22rem;
+    color: #075f5a;
+    font-size: 1.15rem;
+    font-weight: 850;
+}
+
+.treatment-value {
+    margin-top: 0.25rem;
+    color: #234d4a;
+    font-weight: 730;
+    line-height: 1.35;
+}
+
+.cost-hint {
+    margin-top: 0.3rem;
+    color: #71817f;
+    font-size: 0.78rem;
+    line-height: 1.4;
+}
+
+.create-request-button {
+    flex: 0 0 auto;
+    min-height: 3rem;
+    padding-inline: 1.35rem;
+}
+
+.patient-results {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.patient-result-section {
+    overflow: hidden;
+}
+
+.result-heading {
+    padding: 1.25rem 1.4rem;
+    border-bottom: 1px solid #e1ebe9;
+    background: #fbfdfd;
+}
+
+.result-heading > :nth-child(2) {
+    flex: 1;
+}
+
+.result-count {
+    display: grid;
+    min-width: 2rem;
+    min-height: 2rem;
+    place-items: center;
+    padding: 0 0.55rem;
+    border-radius: 999px;
+    color: #075f5a;
+    background: #e5f4f1;
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.patient-card-list {
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem;
+}
+
+.patient-data-card {
+    padding: 1.15rem;
+    border: 1px solid #dce8e6;
+    border-radius: 0.9rem;
+    background: white;
+}
+
+.data-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.data-card-top h3,
+.data-card-top p {
+    margin: 0;
+}
+
+.data-card-top p {
+    margin-top: 0.3rem;
+    color: #657774;
+    line-height: 1.45;
+}
+
+.request-detail-grid,
+.booking-appointment {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+    margin-top: 1rem;
+}
+
+.patient-fact {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+}
+
+.patient-fact > vaadin-icon {
+    flex: 0 0 auto;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.2rem;
+    color: #4b7773;
+}
+
+.patient-fact > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.fact-value {
+    margin-top: 0.18rem;
+    color: #274b48;
+    line-height: 1.4;
+}
+
+.request-windows {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.65rem;
+    background: #f5f9f8;
+}
+
+.request-windows > span:not(.fact-label) {
+    color: #315451;
+    font-size: 0.9rem;
+}
+
+.data-card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 1.25rem;
+    margin-top: 1rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid #e4eceb;
+    color: #657774;
+    font-size: 0.8rem;
+}
+
+.offer-card.offer-open {
+    border-color: #6eaaa5;
+    box-shadow: 0 10px 28px rgb(8 115 109 / 10%);
+}
+
+.offer-appointment {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: #edf7f5;
+}
+
+.offer-appointment > vaadin-icon {
+    flex: 0 0 auto;
+    color: #08736d;
+}
+
+.offer-appointment > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-date {
+    color: #164b47;
+    font-weight: 820;
+}
+
+.offer-type {
+    margin-top: 0.22rem;
+    color: #5c726f;
+    font-size: 0.88rem;
+}
+
+.offer-costs {
+    display: grid;
+    grid-template-columns: minmax(12rem, 0.65fr) minmax(0, 1.35fr);
+    gap: 0.8rem;
+    margin-top: 0.9rem;
+}
+
+.offer-cost-box {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0.9rem;
+    border: 1px solid #dce8e6;
+    border-radius: 0.7rem;
+}
+
+.portal-fee-box {
+    background: #f0f8f6;
+}
+
+.treatment-cost-box {
+    background: #fbfcfc;
+}
+
+.offer-cost-value {
+    margin-top: 0.25rem;
+    color: #164b47;
+    font-size: 1rem;
+    font-weight: 820;
+    line-height: 1.4;
+}
+
+.portal-fee-box .offer-cost-value {
+    color: #075f5a;
+    font-size: 1.3rem;
+}
+
+.offer-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    margin-top: 0.9rem;
+    color: #627572;
+    font-size: 0.84rem;
+}
+
+.offer-expiry {
+    color: #8a5b0c;
+    font-weight: 750;
+}
+
+.offer-expired {
+    color: #7d5350;
+    font-weight: 750;
+}
+
+.offer-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.65rem;
+    margin-top: 1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid #e2ebe9;
+}
+
+.offer-actions vaadin-button {
+    min-height: 2.75rem;
+}
+
+.booking-card.booking-cancelled {
+    border-color: #e5c5c2;
+    background: #fffbfa;
+}
+
+.booking-fee {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    border-radius: 0.7rem;
+    background: #f1f8f6;
+}
+
+.booking-fee > div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.booking-fee-amount {
+    margin-top: 0.18rem;
+    color: #075f5a;
+    font-size: 1.25rem;
+    font-weight: 850;
+}
+
+.booking-reference {
+    margin-top: 0.25rem;
+    color: #748481;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72rem;
+    overflow-wrap: anywhere;
+}
+
+.booking-treatment-note {
+    margin: 0.8rem 0 0;
+    color: #687a77;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.patient-empty-state {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    color: #71817f;
+    text-align: center;
+}
+
+.patient-empty-state > vaadin-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    color: #6d9692;
+}
+
+.patient-empty-state h3 {
+    margin: 0.75rem 0 0;
+}
+
+.patient-empty-state p {
+    max-width: 35rem;
+    margin: 0.4rem 0 0;
+    line-height: 1.55;
+}
+
+.patient-dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: min(28rem, 75vw);
+}
+
+.patient-dialog-content > p {
+    margin: 0;
+    color: #526a67;
+    line-height: 1.55;
+}
+
+.dialog-cost-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid #e1e9e8;
+}
+
+.dialog-cost-row span:last-child {
+    color: #164b47;
+    font-weight: 780;
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+    .patient-basics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .patient-basics-grid > * {
+        grid-column: auto !important;
+    }
+
+    .patient-basics-grid > :nth-child(3) {
+        grid-column: span 2 !important;
+    }
+
+    .availability-window-row {
+        grid-template-columns: 1fr auto;
+    }
+
+    .window-number {
+        grid-column: 1 / -1;
+    }
+
+    .window-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .window-fields > :first-child {
+        grid-column: span 2;
+    }
+
+    .tariff-fields,
+    .offer-costs {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .create-request-button {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 640px) {
+    .patient-page-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .refresh-button {
+        align-self: flex-start;
+    }
+
+    .patient-basics-grid,
+    .window-fields,
+    .patient-checkboxes,
+    .cost-preview,
+    .request-detail-grid,
+    .booking-appointment {
+        grid-template-columns: 1fr;
+    }
+
+    .patient-basics-grid > *,
+    .patient-basics-grid > :nth-child(3),
+    .window-fields > :first-child {
+        grid-column: auto !important;
+    }
+
+    .availability-window-row {
+        padding: 0.7rem;
+    }
+
+    .create-request-button {
+        width: 100%;
+    }
+
+    .result-heading {
+        padding: 1rem;
+    }
+
+    .result-heading .section-icon {
+        display: none;
+    }
+
+    .patient-card-list {
+        padding: 0.8rem;
+    }
+
+    .data-card-top,
+    .booking-fee {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .offer-actions {
+        align-items: stretch;
+        flex-direction: column-reverse;
+    }
+
+    .offer-actions vaadin-button {
+        width: 100%;
+    }
+
+    .patient-dialog-content {
+        width: min(28rem, 82vw);
+    }
+}
